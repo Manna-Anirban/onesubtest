@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Register Form</title>
+  <link rel="stylesheet" href="css/application.css">
+</head>
+<body>
+        <header>
+                <nav>
+                    <ul>
+                        <li><a href="../Webpage\index.html#hero">Home</a></li>
+                        <li><a href="../Webpage\index.html#about">About</a></li>
+                        <li><a href="../Webpage\index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+
+<main>
+
+       
+ <form name = "form1" action ="" method="post">
+    
+
+
+  <table>
+   <tr>
+    <td>Name :</td>
+    <td><input type="text" name="name" placeholder="John Doe"></td>
+   </tr>
+   <tr>
+    <td>Email :</td>
+    <td><input type="email" name="email" placeholder="fakeemail@gmail.com"></td>
+   </tr>
+
+   <tr>
+    <td>Income :</td>
+    <td><input type="number" name="income" min="0" step="500" value="20000"></td>
+   </tr>
+
+   <tr>
+    <td>Credit Score :</td>
+    <td><input type="number" name="credit" min="0" max="850" ></td>
+    </tr>
+
+
+   <tr>
+        <td>Phone # :</td>
+        <td><input type="tel" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="310-123-4567"></td>
+    </tr>
+
+   <tr>
+        <td>Date of Birth :</td>
+        <td><input type="date" name="bday"></td>
+       </tr>
+   
+   <tr>
+    <td><input type="button" name="b1" value="save data" onClick="aa();"></td>
+   </tr>
+  </table>
+ </form>
+
+ <script type ="text/javascript">
+    function aa(){
+        var xmlhttp;
+        xmlhttp=new XMLHttpRequest();
+        xmlhttp.open("GET","insert.php?nm="+document.getElementById("name").value+"&em="+document.getElementById("email").value+"&inc="+document.getElementById("income").value,false);
+        xmlhttp.send(null);
+    }
+ 
+ 
+ 
+ </script>
+
+</main>
+
+
+</body> 
+<!--<script src = "js/main.js"></script>-->
+
+
+</html>
